@@ -1,56 +1,54 @@
-const Modal = ({ isOpen, onClose, title, message, onConfirm, type = "info" }) => {
+import "../style/Modal.css"
+
+const Modal = ({ isOpen, title, message, type, onClose, onConfirm }) => {
   if (!isOpen) return null
 
-  const btnColor = {
-    info:    "btn-navy",
-    success: "btn-success",
-    danger:  "btn-danger",
-    warning: "btn-warning",
+  const getIcon = () => {
+    if (type === "success") return "bi-check-circle-fill"
+    if (type === "danger")  return "bi-exclamation-circle-fill"
+    if (type === "warning") return "bi-exclamation-triangle-fill"
+    return "bi-info-circle-fill"
   }
 
-  const iconMap = {
-    info:    { icon: "bi-info-circle-fill",            color: "var(--navy)" },
-    success: { icon: "bi-check-circle-fill",           color: "#22C55E"     },
-    danger:  { icon: "bi-x-circle-fill",               color: "#EF4444"     },
-    warning: { icon: "bi-exclamation-triangle-fill",   color: "#F59E0B"     },
+  const getIconColor = () => {
+    if (type === "success") return "var(--success)"
+    if (type === "danger")  return "var(--danger)"
+    if (type === "warning") return "var(--warning)"
+    return "var(--accent)"
   }
 
-  const { icon, color } = iconMap[type]
+  const getConfirmClass = () => {
+    if (type === "danger")  return "btn btn-danger"
+    if (type === "success") return "btn btn-success"
+    if (type === "warning") return "btn btn-warning"
+    return "btn btn-primary"
+  }
+
+  const handleConfirm = () => {
+    if (onConfirm) onConfirm()
+    onClose()
+  }
 
   return (
-    <>
-      <div className="modal-backdrop fade show" style={{ zIndex: 1040 }} onClick={onClose} />
-      <div className="modal fade show d-block" style={{ zIndex: 1050 }} tabIndex="-1">
-        <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content">
-
-            <div className="modal-header border-0 pb-0">
-              <div className="d-flex align-items-center gap-2">
-                <i className={`bi ${icon}`} style={{ fontSize: "22px", color }} />
-                <h5 className="modal-title mb-0">{title}</h5>
-              </div>
-              <button type="button" className="btn-close" onClick={onClose} />
-            </div>
-
-            <div className="modal-body pt-2">
-              <p style={{ color: "#555", fontSize: "15px", lineHeight: "1.6" }}>{message}</p>
-            </div>
-
-            <div className="modal-footer border-0 pt-0">
-              <button className="btn btn-ghost" onClick={onClose}>
-                {onConfirm ? "Cancel" : "Close"}
-              </button>
-              {onConfirm && (
-                <button className={`btn ${btnColor[type]}`} onClick={() => { onConfirm(); onClose() }}>
-                  Confirm
-                </button>
-              )}
-            </div>
-
-          </div>
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-box fade-up" onClick={e => e.stopPropagation()}>
+        <div className="modal-icon-wrap" style={{ color: getIconColor() }}>
+          <i className={`bi ${getIcon()}`} />
+        </div>
+        <div className="modal-title">{title}</div>
+        <div className="modal-message">{message}</div>
+        <div className="modal-actions">
+          {onConfirm && (
+            <button className={getConfirmClass()} onClick={handleConfirm}>
+              Confirm
+            </button>
+          )}
+          <button className="btn btn-outline" onClick={onClose}>
+            {onConfirm ? "Cancel" : "Close"}
+          </button>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
