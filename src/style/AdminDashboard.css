@@ -1,55 +1,73 @@
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.dashboard-header h2 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.dashboard-header p  { font-size: 13px; color: var(--text-secondary); margin: 0; }
+
 .dashboard-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 13px;
-  color: var(--gray);
-  font-weight: 600;
-  background: #fff;
-  padding: 8px 16px;
-  border-radius: 10px;
+  color: var(--text-secondary);
+  background: var(--surface);
   border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  font-weight: 500;
 }
 
 .quick-actions-title {
-  font-family: var(--font-display);
+  font-size: 14px;
   font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 16px;
-  color: var(--navy);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 14px;
+  margin-top: 4px;
 }
 
 .quick-link-card {
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 0.15s;
+  border-left: 3px solid transparent;
 }
 
 .quick-link-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(27, 27, 110, 0.12);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
 }
 
 .quick-link-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .quick-link-title {
-  font-weight: 800;
-  font-size: 15px;
-  color: var(--navy);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-primary);
 }
 
 .quick-link-desc {
-  font-size: 13px;
-  color: var(--gray);
+  font-size: 12px;
+  color: var(--text-secondary);
   margin-top: 2px;
 }
 
 .quick-link-chevron {
-  color: #ccc;
-  font-size: 18px;
+  color: var(--border-dark);
+  font-size: 16px;
 }

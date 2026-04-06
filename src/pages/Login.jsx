@@ -5,6 +5,7 @@ import { useNavigate, Link } from "react-router-dom"
 import { jwtDecode } from "jwt-decode"
 import Cookies from "universal-cookie"
 import Modal from "../components/Modal"
+import "../style/Login.css"
 
 const Login = () => {
   const navigate = useNavigate()

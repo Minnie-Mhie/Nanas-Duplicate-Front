@@ -1,34 +1,23 @@
+.users-sub   { font-size: 13px; color: var(--text-secondary); margin: 0; }
+.users-total { font-size: 13px; font-weight: 700; color: var(--text-primary); }
+.users-search-group { max-width: 400px; }
+
 .user-avatar {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: var(--lavender);
+  background: var(--navy-light);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 14px;
-  color: var(--plum);
-  flex-shrink: 0;
-}
-
-.user-name {
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.user-email {
-  font-size: 13px;
-  color: #666;
-}
-
-.users-total {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 12px;
   color: var(--navy);
+  flex-shrink: 0;
+  font-family: var(--font-display);
 }
 
-.users-sub { font-size: 14px; }
-.user-index { font-size: 13px; color: #aaa; }
-.user-date { font-size: 13px; color: #888; }
-.users-search-group { max-width: 400px; }
+.user-name  { font-weight: 600; font-size: 13px; }
+.user-email { font-size: 12px; color: var(--text-secondary); }
+.user-index { font-size: 12px; color: var(--text-muted); }
+.user-date  { font-size: 12px; color: var(--text-muted); }

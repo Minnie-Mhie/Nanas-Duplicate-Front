@@ -1,54 +1,28 @@
-.vendor-store-name {
-  font-weight: 700;
-  font-size: 16px;
-  color: var(--navy);
-}
+.vendors-sub { font-size: 13px; color: var(--text-secondary); margin: 0; }
 
-.vendor-store-desc {
-  font-size: 13px;
-  color: #888;
-  margin-top: 2px;
-}
-
-.vendor-owner-info {
-  font-size: 13px;
-  color: #666;
-  margin-top: 6px;
-}
-
-.vendor-applied-date {
-  font-size: 12px;
-  color: #aaa;
-  margin-top: 4px;
-}
-
-.vendor-active-text {
-  font-size: 13px;
-  color: #22C55E;
-}
+.vendor-store-name  { font-weight: 700; font-size: 14px; color: var(--text-primary); }
+.vendor-store-desc  { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+.vendor-owner-info  { font-size: 12px; color: var(--text-secondary); margin-top: 6px; }
+.vendor-applied-date { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+.vendor-active-text { font-size: 12px; color: var(--success); font-weight: 600; }
+.vendor-name-cell   { font-weight: 600; font-size: 13px; }
+.vendor-desc-preview { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.vendor-owner-name  { font-size: 13px; }
+.vendor-owner-email { font-size: 12px; color: var(--text-secondary); }
+.vendor-date        { font-size: 12px; color: var(--text-muted); }
 
 .pending-section-title {
   font-weight: 700;
-  font-size: 15px;
-  color: var(--navy);
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
   margin-bottom: 12px;
 }
 
-.vendor-name-cell {
-  font-weight: 600;
-}
+.vendor-pending-card { border-left: 3px solid var(--warning) !important; }
 
-.vendor-desc-preview {
-  font-size: 12px;
-  color: #aaa;
-}
-
-.vendors-sub { font-size: 14px; }
-.vendor-pending-card { border-left: 4px solid #F59E0B; }
-.vendor-owner-name { font-size: 14px; }
-.vendor-owner-email { font-size: 13px; color: #666; }
-.vendor-date { font-size: 13px; color: #888; }
-.text-plum { color: var(--plum); }
-.text-orange { color: #92400E; }
-.text-green { color: #166534; }
-.text-red { color: #991B1B; }
+.text-plum   { color: var(--accent); }
+.text-orange { color: var(--warning); }
+.text-green  { color: var(--success); }
+.text-red    { color: var(--danger); }

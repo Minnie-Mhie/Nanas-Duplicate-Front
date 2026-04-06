@@ -2,17 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
 }
 
-.vendor-dashboard-header h2 { margin-bottom: 4px; }
-.vendor-dashboard-sub { color: #888; font-size: 14px; margin: 0; }
-.vendor-dashboard-date { font-size: 13px; color: #888; }
+.vendor-dashboard-header h2 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.vendor-dashboard-sub  { font-size: 13px; color: var(--text-secondary); margin: 0; }
+.vendor-dashboard-date { font-size: 13px; color: var(--text-muted); }
 
 .vendor-revenue-card {
-  background: linear-gradient(135deg, var(--navy), var(--plum));
+  background: linear-gradient(135deg, var(--navy) 0%, #2D1B8E 100%);
   border: none;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .vendor-revenue-body {
@@ -23,42 +25,46 @@
 }
 
 .vendor-revenue-label {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.55);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
 }
 
 .vendor-revenue-amount {
   font-family: var(--font-display);
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 800;
   color: #fff;
-  margin-top: 4px;
 }
 
 .vendor-revenue-icon {
-  font-size: 48px;
-  color: rgba(255,255,255,0.15);
+  font-size: 44px;
+  color: rgba(255,255,255,0.1);
 }
 
 .vendor-section-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
 }
 
 .vendor-section-title {
+  font-size: 13px;
   font-weight: 700;
-  font-size: 15px;
-  color: var(--navy);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
 
 .vendor-section-link {
-  font-size: 13px;
-  color: var(--pink);
+  font-size: 12px;
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
 }
@@ -67,74 +73,53 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 8px 0;
-  border-bottom: 1px solid #f5f5f5;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
 }
+
+.vendor-product-row:last-child { border-bottom: none; }
 
 .vendor-product-row-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius);
   object-fit: cover;
-  background: #f0f0f0;
+  background: var(--bg);
+  border: 1px solid var(--border);
 }
 
-.vendor-product-row-name {
-  font-weight: 600;
-  font-size: 13px;
-}
-
-.vendor-product-row-price {
-  font-size: 12px;
-  color: #888;
-}
+.vendor-product-row-name  { font-weight: 600; font-size: 13px; color: var(--text-primary); }
+.vendor-product-row-price { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
 
 .vendor-order-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid #f5f5f5;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
 }
 
-.vendor-order-row-name {
-  font-weight: 600;
-  font-size: 13px;
-}
+.vendor-order-row:last-child { border-bottom: none; }
 
-.vendor-order-row-meta {
-  font-size: 12px;
-  color: #888;
-}
+.vendor-order-row-name { font-weight: 600; font-size: 13px; color: var(--text-primary); }
+.vendor-order-row-meta { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
 
 .vendor-empty-text {
   text-align: center;
-  padding: 12px 0;
-  color: #aaa;
-  font-size: 14px;
+  padding: 20px 0;
+  color: var(--text-muted);
+  font-size: 13px;
 }
 
 .vendor-rejected-warning {
-  background: #FEE2E2;
+  background: var(--danger-bg);
   border: 1px solid #FECACA;
-  border-radius: 12px;
+  border-left: 3px solid var(--danger);
+  border-radius: var(--radius);
   padding: 14px 18px;
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
-.vendor-rejected-title {
-  font-weight: 700;
-  color: #991B1B;
-  font-size: 14px;
-}
-
-.vendor-rejected-desc {
-  font-size: 13px;
-  color: #B91C1C;
-  margin-top: 4px;
-}
-
-.vendor-rejected-link {
-  color: #991B1B;
-  font-weight: 700;
-}
+.vendor-rejected-title { font-weight: 700; color: var(--danger); font-size: 13px; }
+.vendor-rejected-desc  { font-size: 12px; color: #B91C1C; margin-top: 4px; }
+.vendor-rejected-link  { color: var(--danger); font-weight: 700; }
