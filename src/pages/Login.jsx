@@ -39,7 +39,7 @@ const Login = () => {
       try {
         // console.log(values)
         console.log("successful")
-        const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/login`, {
+        const response = await axios.post(`https://localhost:5000/api/v1/login`, {
           email:    values.email,
           password: values.password,
         })
